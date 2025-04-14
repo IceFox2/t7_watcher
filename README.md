@@ -1,2 +1,53 @@
-# t7_watcher
-Verify that T7Patch is running alongside the game
+# T7 Watcher
+
+Sometimes you might forget about running the T7 patch alongside Black Ops 3, that's why this script exists.
+If the game is detected without the T7 patch, it will automatically close the game.
+
+---
+
+## 🧰 Requirements
+
+- [Python](https://www.python.org/downloads/)
+- `psutil` library
+
+### Install psutil
+
+```bash
+pip install psutil
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+1. **Download** `t7_watcher.py` to a location of your choice.
+
+2. **Create a shortcut** to the script:
+   - Right-click the `.py` file and select **Create shortcut**.
+
+3. **Edit the shortcut's target**:
+   - Add the full path to `pythonw.exe` (Python’s background launcher), followed by the path to your script.  
+     For example:
+
+     ```
+     "C:\Users\YourName\AppData\Local\Programs\Python\Python311\pythonw.exe" "C:\Scripts\t7_watcher.py"
+     ```
+
+     Replace the paths with your actual installation and script locations.
+
+   - **Note:** `pythonw.exe` runs the script without opening a console window.
+
+4. **Move the shortcut to the Startup folder**:
+   - Navigate to:
+     ```
+     C:\Users\YourName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+     ```
+   - Or press `Win + R`, type `shell:startup`, and hit Enter.
+
+This will automatically launch the script at startup, ensuring Black Ops 3 only runs when the T7 patch is active.
+
+---
+
+## ❓ Is it working?
+Upon rebooting, you should see **python** running in the Task Manager.  
+If you try to open **Black Ops 3** without the T7 Patch, it should automatically close the game.
