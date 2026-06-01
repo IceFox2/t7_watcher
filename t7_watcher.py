@@ -24,7 +24,7 @@ def terminate_process(process_name):
     return False
 
 def monitor_processes():
-    t7_patch_pattern = r"t7patch_\d+\.\d+\.exe"
+    t7_patch_pattern = r"(?:t7patch_\d+\.\d+|t7dwidm_protect)\.exe"
 
     while True:
         try:
